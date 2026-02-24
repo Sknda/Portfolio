@@ -1,5 +1,3 @@
-
-
 A personal portfolio website built with vanilla HTML, CSS, and JavaScript.
 
 
@@ -31,11 +29,7 @@ npx http-server . -p 3000 -c-1
 
 Then open `http://localhost:3000` in your browser.
 
-## Contact
 
-- **Email:** skanda7066@gmail.com
-- **LinkedIn:** [linkedin.com/in/sai-skanda-a-](https://www.linkedin.com/in/sai-skanda-a-)
-- **GitHub:** [github.com/Sknda](https://github.com/Sknda)
 
 ---
 
