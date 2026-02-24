@@ -2,9 +2,7 @@
 
 'use strict';
 
-// ═══════════════════════════════════════════════════════════
-// DOM References
-// ═══════════════════════════════════════════════════════════
+
 const html = document.documentElement;
 const body = document.body;
 const navbar = document.getElementById('navbar');
@@ -20,9 +18,7 @@ const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 const allNavLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
 const sections = document.querySelectorAll('section[id]');
 
-// ═══════════════════════════════════════════════════════════
-// 1. THEME TOGGLE
-// ═══════════════════════════════════════════════════════════
+// Theme
 function getStoredTheme() {
   return localStorage.getItem('portfolio-theme') || 'dark';
 }
@@ -37,21 +33,18 @@ function toggleTheme() {
   applyTheme(current === 'dark' ? 'light' : 'dark');
 }
 
-// Load saved theme immediately to avoid flash
+
 applyTheme(getStoredTheme());
 
 if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
 
-// ═══════════════════════════════════════════════════════════
-// 2. DYNAMIC YEAR
-// ═══════════════════════════════════════════════════════════
+
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-// ═══════════════════════════════════════════════════════════
-// 3. SCROLL EVENTS (progress bar, navbar, back-to-top, spy)
-// ═══════════════════════════════════════════════════════════
+
+
 function updateScrollProgress() {
   const scrollTop = window.scrollY;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -114,9 +107,8 @@ window.addEventListener('scroll', onScroll, { passive: true });
 // Run once on load to set initial state
 onScroll();
 
-// ═══════════════════════════════════════════════════════════
-// 4. SMOOTH SCROLL
-// ═══════════════════════════════════════════════════════════
+
+
 function smoothScrollTo(targetId) {
   const target = document.querySelector(targetId);
   if (!target) return;
@@ -150,16 +142,14 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// ═══════════════════════════════════════════════════════════
-// 5. BACK TO TOP
-// ═══════════════════════════════════════════════════════════
+
+
 if (backToTop) backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// ═══════════════════════════════════════════════════════════
-// 6. MOBILE MENU
-// ═══════════════════════════════════════════════════════════
+
+
 function openMobileMenu() {
   mobileMenu.classList.add('open');
   menuOverlay.classList.add('active');
@@ -181,26 +171,24 @@ hamburger.addEventListener('click', () => {
   isOpen ? closeMobileMenu() : openMobileMenu();
 });
 
-// Close on overlay click
+
 menuOverlay.addEventListener('click', closeMobileMenu);
 
-// Close on Escape key
+
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
     closeMobileMenu();
   }
 });
 
-// Close menu when resizing to desktop
+
 window.addEventListener('resize', () => {
   if (window.innerWidth > 768 && mobileMenu.classList.contains('open')) {
     closeMobileMenu();
   }
 });
 
-// ═══════════════════════════════════════════════════════════
-// 7. INTERSECTION OBSERVER — Fade-in on scroll
-// ═══════════════════════════════════════════════════════════
+
 const fadeEls = document.querySelectorAll('.project-card, .contact-card, .skill-badge, .about-text, .skills-panel');
 
 fadeEls.forEach((el) => el.classList.add('fade-in'));
