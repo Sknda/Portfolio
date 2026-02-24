@@ -1,10 +1,4 @@
-/* ═══════════════════════════════════════════════════════════
-   ALEX MORGAN — PORTFOLIO STYLES
-   Aesthetic: Editorial Dark / Precision Geometric
-   Fonts: Syne (display) + DM Sans (body)
-═══════════════════════════════════════════════════════════ */
 
-/* ─── CSS Custom Properties ─────────────────────────────── */
 :root {
   /* Dark theme (default) */
   --bg: #000000;
@@ -47,7 +41,7 @@
   --shadow-hover: 0 16px 48px rgba(109, 40, 217, 0.15);
 }
 
-/* ─── Reset & Base ──────────────────────────────────────── */
+/* ─── Reset & Base ─── */
 *,
 *::before,
 *::after {
@@ -56,7 +50,6 @@
   padding: 0;
 }
 
-/* ─── Focus Styles (Keyboard Accessibility) ─────────────── */
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
@@ -100,7 +93,6 @@ button {
   background: none;
 }
 
-/* ─── Scroll Progress Bar ───────────────────────────────── */
 #scroll-progress {
   position: fixed;
   top: 0;
@@ -113,7 +105,6 @@ button {
   pointer-events: none;
 }
 
-/* ─── Navigation ────────────────────────────────────────── */
 #navbar {
   position: fixed;
   top: 3px;
@@ -282,7 +273,6 @@ button {
   transform: translateY(-6.5px) rotate(-45deg);
 }
 
-/* ─── Mobile Menu ───────────────────────────────────────── */
 .mobile-menu {
   position: fixed;
   top: 71px;
@@ -341,7 +331,7 @@ button {
   pointer-events: all;
 }
 
-/* ─── Section Shared Styles ─────────────────────────────── */
+/* ─── Section Shared Styles ──── */
 .section-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -375,7 +365,7 @@ button {
   background-clip: text;
 }
 
-/* ─── Hero Section ──────────────────────────────────────── */
+/*Hero Section */
 #hero {
   position: relative;
   min-height: 100dvh;

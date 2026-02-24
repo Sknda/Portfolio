@@ -4,7 +4,8 @@ A personal portfolio website built with vanilla HTML, CSS, and JavaScript.
 
 ## 🌐 Live Preview
 
-> Live at: https://sknda.githu *(update once deployed)
+> Live at: https://portfoliodeployed-one.vercel.app/
+
 ## ✨ Features
 
 - Dark / Light theme toggle with `localStorage` persistence
