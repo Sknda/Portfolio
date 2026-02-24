@@ -2,7 +2,7 @@ A personal portfolio website built with vanilla HTML, CSS, and JavaScript.
 
 ## Live Preview
 
-> Live at: https://portfoliodeployed-one.vercel.app/
+> Live at: https://portfoliofinal-gilt.vercel.app/
 
 ##  Features
 
